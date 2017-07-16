@@ -1,0 +1,19 @@
+#form with a title and body; we'll put in a partial to render on both the new oage and edit page
+
+<h2> Make Something </h2>
+<%= form_for :post, url: posts_path do |f| %>
+  <p>
+    <%= f.label :title %> <br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :body %> <br>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <% end %>
